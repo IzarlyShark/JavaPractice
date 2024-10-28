@@ -36,7 +36,7 @@ javafx {
 
 dependencies {
     // https://mavenlibs.com/maven/dependency/postgresql/postgresql
-    implementation 'postgresql:postgresql:9.1-901-1.jdbc4'
+    implementation('org.postgresql:postgresql:42.5.0')
     implementation('org.controlsfx:controlsfx:11.1.2')
     implementation('com.dlsc.formsfx:formsfx-core:11.6.0') {
         exclude(group: 'org.openjfx')
