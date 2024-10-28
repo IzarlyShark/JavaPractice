@@ -65,6 +65,7 @@ public class MainMenuConsoleUI {
                         break;
                     case 8:
                         readerManagementConsoleUI.deleteReader();
+                        break;
                     default:
                         println("Please enter a valid option!");
                 }
