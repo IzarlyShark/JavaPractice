@@ -1,3 +1,5 @@
+CREATE DATABASE library_db;
+
 CREATE TABLE BOOKS
 (
     id serial PRIMARY KEY,
