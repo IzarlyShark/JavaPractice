@@ -30,14 +30,12 @@ public class DatabaseManager {
 
     }
 
-    //Возвращает текущее соединение с базой данных
     public Connection getConnection() {
         if (!isOpenConnection())
             throw new DatabaseManagerException("Ошибка при создании соединения!");
         return connection;
     }
 
-    //Закрывает текущее соединение с базой данных, если оно открыто
     public boolean closeConnection() {
         try {
             if (isOpenConnection()) {
@@ -51,7 +49,6 @@ public class DatabaseManager {
         }
     }
 
-    //Проверяет, открыто ли текущее соединение с базой данных
     public boolean isOpenConnection() {
         try {
             if (connection == null || connection.isClosed())

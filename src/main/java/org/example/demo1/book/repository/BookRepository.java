@@ -46,7 +46,6 @@ public class BookRepository {
         } catch (SQLException e) {
             throw new RepositoryException(e);
         }
-
     }
 
     public boolean existsByIsbn(String isbn) {
