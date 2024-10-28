@@ -1,14 +1,17 @@
-package org.example.demo1.entity;
+package org.example.demo1.book.entity;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Book {
-    private  Integer id;
+    private Integer id;
     private String title;
     private String author;
     private LocalDate publishedDate;
     private String isbn;
+
+    public Book() {
+
+    }
 
     public Book(String title, String isbn) {
         this.title = title;
@@ -16,7 +19,7 @@ public class Book {
     }
 
     public Book(String title, String isbn, String author) {
-        this(title,isbn);
+        this(title, isbn);
         this.author = author;
     }
 
@@ -28,6 +31,18 @@ public class Book {
         this.isbn = isbn;
     }
 
+    public Book(String isbn, String title, String author, LocalDate publishedDate) {
+        this.title = title;
+        this.author = author;
+        this.publishedDate = publishedDate;
+        this.isbn = isbn;
+    }
+
+    @Override
+    public String toString() {
+        return "ID=%s ISBN=%s TITLE=%s AUTHOR=%s PUBLISHED_DATE=%s"
+                .formatted(id, isbn, title, author, publishedDate);
+    }
     public Integer getId() {
         return id;
     }

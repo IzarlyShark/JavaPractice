@@ -6,3 +6,10 @@ CREATE TABLE BOOKS
     author varchar,
     published_date date
 );
+
+CREATE TABLE READERS
+(
+    id serial PRIMARY KEY,
+    name varchar NOT NULL,
+    email varchar UNIQUE NOT NULL
+);

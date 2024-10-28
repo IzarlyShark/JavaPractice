@@ -1,4 +1,4 @@
-package org.example.demo1.entity;
+package org.example.demo1.reader.entity;
 
 public class Reader {
     private Integer id;
@@ -10,6 +10,17 @@ public class Reader {
         this.email = email;
     }
 
+    public Reader(Integer id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "ID=%s NAME=%s EMAIL=%s"
+                .formatted(id, name, email);
+    }
 
     public Integer getId() {
         return id;
